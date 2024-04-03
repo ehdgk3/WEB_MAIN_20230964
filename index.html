@@ -11,10 +11,13 @@
         <title>메인 화면</title>
         <script type="text/javascript" src="js/Basic_js_test.js"></script>
         <script src = "js/Basic_js_test.js" defer></script>
+        <script src = "js/data_type.js" defer></script>
+        <script src = "js/search.js" defer></script>
+        <script src = "js/pop_up.js" defer></script>
 
     </head>
 
-    <body style="background-color: black;">
+    <body style="background-color: black;" onload="pop_up();">
       <style>
         hr {
   height: 1px;
@@ -64,10 +67,10 @@
                   <li class="nav-item">
                     <a class="nav-link" href="https://download.kr.riotgames.com/league" target="_blank">다운로드</a>
                   </li>
-                  <form class="d-flex" role="search"> <!--검색창 구현-->
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" id="search_btn" type="submit">Search</button>
-                  </form>
+                  <form class="d-flex" role="search" onsubmit="return googleSearch();"> <!-- 검색창 구현 -->
+                    <input class="form-control me-2" id="search_input" name="q" type="search" placeholder="키워드 입력" aria-label="Search">
+                    <button class="btn btn-outline-success" id="search_btn" type="submit">검색하기</button>
+                    </form>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       고객지원
