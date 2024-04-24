@@ -5,3 +5,8 @@ function googleSearch() {
     window.open(googleSearchUrl, "_blank"); // 새로운 창에서 열기.
     return false;
     }
+
+document.getElementById("search_btn").addEventListener('click', search_message);
+function search_message(){
+alert("검색을 수행합니다!")
+}
