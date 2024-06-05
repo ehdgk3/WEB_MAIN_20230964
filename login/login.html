@@ -11,10 +11,11 @@
         <link rel="stylesheet" href="../css/login.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.0/purify.min.js" integrity="sha512-ZCsRHqhdDXrq4iTXVZLkGBsOfDlvhvHhEMQlCosf9Oqy1p6xizF1LSWa6uuISGqeh9PmCzfneGcYZvc9t/hjaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src = "../js/login.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         
         <title>로그인 화면</title>
     </head>
-    <body style="background-color: black;">
+    <body class= "text-center" onload= "init();" style="background-color: black;">
         <section class="vh-100 gradient-custom">
             <div class="container py-5 h-100">
               <div class="row d-flex justify-content-center align-items-center h-100">
@@ -33,7 +34,12 @@
                           <label class="form-label" for="typePasswordX">패스워드</label>
                           </div>
                           <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">패스워드 찾기</a></p>
-                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" id="login_btn" type="button">로그인</button>
+                          <div class="checkbox mb-3">
+                            <label>
+                            <input type="checkbox" value="remember-me" id="idSaveCheck"> 아이디 기억
+                            </label>
+                            </div>
+                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" id="login_btn" type="submit">로그인</button>
                           </form>
                           
           
@@ -57,6 +63,7 @@
               </div>
             </div>
           </section>
+          
         <div style = "display: flex; justify-content: center;">
             <h3 style="font-size: 24; font-weight: bold; font-style: italic; color: white;">라이엇 게임 회사 정보 2024년 3월 작성됨.</h3>
     </body>
