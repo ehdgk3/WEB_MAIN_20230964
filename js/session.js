@@ -72,7 +72,7 @@ function session_join_set(){ //세션 저장(객체)
         const objString = JSON.stringify(newSignUp); // 객체 -> JSON 문자열 변환
         let en_text = encrypt_text(objString); // 암호화
         sessionStorage.setItem("Session_Storage_object", objString);
-        sessionStorage.setItem("Session_Storage_encryted", en_text);
+        sessionStorage.setItem("Session_Storage_encrypted", en_text);   //14주차 ppt에는 encryted라고 되어 있음.
     } else {
         alert("세션 스토리지 지원 x");
     }   
